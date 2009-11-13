@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux (vers 6 November 2007), see www.w3.org">
+
+  <title>CUSF landing prediction RESTful example</title>
+  <script src="http://www.google.com/jsapi" type="text/javascript">
+</script>
+  <script src="js/landpred.js" type="text/javascript">
+</script>
+  <link rel="stylesheet" href="css/landpred.css" type="text/css">
+  <link rel="stylesheet" href="css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css">
+</head>
+
+<body>
+  <p>This is an example of a REST-ful interface for the CUSF
+  landing prediction.</p>
+
+  <h1>New prediction</h1>
+
+  <form id="scenario" name="scenario" action="#">
+    <table summary="Scenario parameters">
+      <tr>
+        <th colspan="2">Launch site</th>
+      </tr>
+
+      <tr>
+        <td>Latitude</td>
+
+        <td><input type="text" name="launch-site:latitude" value=
+        "52.2135"> deg. North</td>
+      </tr>
+
+      <tr>
+        <td>Longitude</td>
+
+        <td><input type="text" name="launch-site:longitude" value=
+        "0.0964"> deg. East</td>
+      </tr>
+
+      <tr>
+        <td>Altitude</td>
+
+        <td><input type="text" name="launch-site:altitude" value=
+        "0"> m</td>
+      </tr>
+
+      <tr>
+        <th colspan="2">Atmosphere model</th>
+      </tr>
+
+      <tr>
+        <td>Wind speed error</td>
+
+        <td><input type="text" name="atmosphere:wind-error" value=
+        "10"> m/s (RMS)</td>
+      </tr>
+
+      <tr>
+        <th colspan="2">Altitude model</th>
+      </tr>
+
+      <tr>
+        <td>Ascent rate</td>
+
+        <td><input type="text" name="altitude-model:ascent-rate"
+        value="3"> m/s</td>
+      </tr>
+
+      <tr>
+        <td>Descent rate</td>
+
+        <td><input type="text" name="altitude-model:descent-rate"
+        value="5"> m/s (at sea level)</td>
+      </tr>
+
+      <tr>
+        <td>Burst altitude</td>
+
+        <td><input type="text" name="altitude-model:burst-altitude"
+        value="30000"> m</td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><input type="button" name="submit" value=
+        "Run prediction"></td>
+      </tr>
+    </table>
+  </form>
+
+  <div id="errordialog" title="Error"></div>
+  <div id="waitingdialog" title="Please wait"><center><img src="images/Spinning_wheel_throbber.gif"></center> <p>Running landing prediction&hellip;</p></div>
+  <div id="success"></div>
+</body>
+</html>

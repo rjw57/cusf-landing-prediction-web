@@ -1,0 +1,10 @@
+#newpredlog {
+	font-family: monospace;
+	overflow: auto;
+}
+
+#newpredlog span.level { display: none; }
+#newpredlog .logline { padding: 0; margin: 0; white-space: pre; }
+#newpredlog .logINFO { color: #006600; }
+#newpredlog .logWARN { color: #000066; }
+#newpredlog .logERROR { color: #660000; }
